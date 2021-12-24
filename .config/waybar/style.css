@@ -1,1 +1,102 @@
+* {
+  border: none;
+  font-family: agave NF, regular;
+  font-size: 16px;
+}
 
+window#waybar {
+  /* background-color: rgba(18, 21, 29, 0.98); */
+  background-color: #181818;
+  /* background-color: rgba(0, 0, 0, 0); */
+  color: #181818;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces,
+#cpu,
+#memory,
+#clock,
+#idle_inhibitor,
+#language,
+#disk,
+#tray {
+  background-color: #1e222a;
+  padding: 0 10px;
+  margin: 4px 4px 4px 4px;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 90px;
+  background-clip: padding-box;
+}
+
+#workspaces button {
+  padding: 0 0px;
+  min-width: 20px;
+  color: #61afef;
+}
+
+#workspaces button.focused {
+  color: #ff2121;
+}
+
+#workspaces button.urgent {
+  color: #e06c75;
+}
+
+#cpu {
+  color: #61afef;
+}
+
+#memory {
+  color: #61afef;
+}
+
+#temperature {
+  color: #d19a66;
+}
+
+#temperature.critical {
+  background-color: #e06c75;
+  color: #1e222a;
+}
+
+#custom-media {
+  background-color: #c678dd;
+  color: #1e222a;
+}
+
+#custom-fans {
+  color: #98c379;
+}
+
+#clock {
+  color: #61afef;
+}
+
+#idle_inhibitor {
+  color: #abb2bf;
+}
+
+#idle_inhibitor.activated {
+  background-color: #abb2bf;
+  color: #1e222a;
+}
+
+#language {
+  color: #61afef;
+}
+
+@keyframes blink {
+    to {
+        background-color: #1e222a;
+        color: #e06c75;
+    }
+}
+
+#disk {
+     color: #61afef;
+}

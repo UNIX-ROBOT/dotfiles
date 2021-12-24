@@ -1,0 +1,73 @@
+{
+    "height": 37, // Waybar height (to be removed for auto height)
+    "modules-left": ["sway/workspaces", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": ["idle_inhibitor", "sway/language","disk","cpu", "memory","battery", "tray"],
+
+    // Modules configuration
+     "sway/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+             "1": "1",
+             "2": "2",
+             "3": "3",
+             "4": "4",
+             "5": "5",
+             "6": "6",
+             "7": "7",
+             "8": "8",
+             "9": "9",
+             "10": "10",
+             "urgent": " ",
+             "focused": " ",
+             "default": " "
+         }
+     },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/language": {
+        "format": "{short}"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	    "format": "{:%H:%M}  ",
+	    "format-alt": "{:%A, %B %d, %Y}  "
+    },
+    "cpu": {
+        "format": "{usage}% CPU",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% RAM"
+    },
+    "disk": {
+        "interval": 30,
+        "path": "/",
+        "format": "{percentage_used}% DISK",
+    },
+    "battery": {
+        "bat": "BAT0",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    }
+}
+
